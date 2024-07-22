@@ -1,0 +1,259 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local ThomasBtn = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local FlingBtn = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame.BackgroundTransparency = 0.560
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.28132388, 0, 0.378026903, 0)
+Frame.Size = UDim2.new(0, 370, 0, 215)
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(112, 0, 0)
+TextLabel.BackgroundTransparency = 0.200
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0378378369, 0, 0.0651162788, 0)
+TextLabel.Size = UDim2.new(0, 342, 0, 30)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = ""
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+UICorner_2.CornerRadius = UDim.new(0, 11)
+UICorner_2.Parent = TextLabel
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.854054034, 0, 0.0651162788, 0)
+TextButton.Size = UDim2.new(0, 40, 0, 30)
+TextButton.Font = Enum.Font.Highway
+TextButton.Text = "x"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 30.000
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0891891867, 0, 0.0744186044, 0)
+TextLabel_2.Size = UDim2.new(0, 159, 0, 26)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "Thomas Fling GUI"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 23.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(112, 0, 0)
+TextLabel_3.BackgroundTransparency = 0.200
+TextLabel_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.0378378369, 0, 0.251162797, 0)
+TextLabel_3.Size = UDim2.new(0, 342, 0, 143)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = ""
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 1.000
+
+UICorner_3.CornerRadius = UDim.new(0, 11)
+UICorner_3.Parent = TextLabel_3
+
+ThomasBtn.Name = "ThomasBtn"
+ThomasBtn.Parent = Frame
+ThomasBtn.BackgroundColor3 = Color3.fromRGB(99, 0, 0)
+ThomasBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ThomasBtn.BorderSizePixel = 0
+ThomasBtn.Position = UDim2.new(0.0891891867, 0, 0.330232561, 0)
+ThomasBtn.Size = UDim2.new(0, 120, 0, 107)
+ThomasBtn.Font = Enum.Font.SourceSans
+ThomasBtn.Text = "Thomas"
+ThomasBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+ThomasBtn.TextSize = 24.000
+ThomasBtn.TextWrapped = true
+
+UICorner_4.Parent = ThomasBtn
+
+FlingBtn.Name = "FlingBtn"
+FlingBtn.Parent = Frame
+FlingBtn.BackgroundColor3 = Color3.fromRGB(99, 0, 0)
+FlingBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FlingBtn.BorderSizePixel = 0
+FlingBtn.Position = UDim2.new(0.586486459, 0, 0.33488372, 0)
+FlingBtn.Size = UDim2.new(0, 120, 0, 107)
+FlingBtn.Font = Enum.Font.SourceSans
+FlingBtn.Text = "Touch Fling GUI"
+FlingBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlingBtn.TextSize = 19.000
+FlingBtn.TextWrapped = true
+
+UICorner_5.Parent = FlingBtn
+
+-- Scripts:
+
+local function GLTHDQ_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.2
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(GLTHDQ_fake_script)()
+local function TQGVXG_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(TQGVXG_fake_script)()
+local function KNKEVVR_fake_script() -- ThomasBtn.LocalScript 
+	local script = Instance.new('LocalScript', ThomasBtn)
+
+	script.Parent.MouseButton1Down:Connect(function()
+	
+		local p = game.Players.LocalPlayer.Character
+		local weld = Instance.new("Weld", p:FindFirstChild("HumanoidRootPart") or p.Torso)
+		weld.Part0 = p:FindFirstChild("HumanoidRootPart") or p.Torso
+	
+		local train = Instance.new("Part", weld.Part0)
+		train.Anchored = true
+		train.CanCollide = false
+		train.Size = Vector3.new(3, 2, 6)
+		train.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
+		local TrainMesh = Instance.new("SpecialMesh", train)
+		TrainMesh.MeshType = Enum.MeshType.FileMesh
+		TrainMesh.Scale = Vector3.new(0.020, 0.020, 0.015)
+		TrainMesh.MeshId = "rbxassetid://16121800660"
+		TrainMesh.TextureId = "rbxassetid://16121800738"
+	
+		weld.Part1 = train
+		weld.C1 = CFrame.new(0, 0, 0) * CFrame.Angles(0, math.rad(180), 0)
+		train.Anchored = false
+	
+		local weld2 = Instance.new("Weld", weld.Part0)
+		local Smoke = Instance.new("Part", weld.Part0)
+		Smoke.Anchored = true
+		Smoke.CanCollide = false
+		Smoke.Size = Vector3.new(1, 1, 1)
+		Smoke.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
+		weld2.Part1 = Smoke
+		weld2.C1 = CFrame.new(0, -4, 3.5)
+		Smoke.Anchored = false
+		Smoke.Transparency = 1
+	
+		local Particle = Instance.new("ParticleEmitter", Smoke)
+		Particle.Rate = 50
+		Particle.Speed = NumberRange.new(30, 60)
+		Particle.VelocitySpread = 4
+		Particle.Texture = "rbxassetid://133619974"
+	
+		local Light = Instance.new("SpotLight", train)
+		Light.Angle = 45
+		Light.Brightness = 100
+		Light.Face = Enum.NormalId.Back
+		Light.Range = 30
+	
+		p:WaitForChild("Humanoid").WalkSpeed = 60
+	
+		for i, v in pairs(p:GetChildren()) do
+			if v:IsA("Part") or v:IsA("MeshPart") then
+				v.Transparency = 1
+			elseif v:IsA("Accessory") or v:IsA("Model") then
+				v:Destroy()
+			end
+		end
+	
+		local function SFX(id)
+			local s = Instance.new("Sound", p:FindFirstChild("HumanoidRootPart") or p.Torso)
+			s.SoundId = "rbxassetid://" .. id
+			s.Volume = 1
+			return s
+		end
+	
+		train.Touched:Connect(function(p)
+			if p.Parent and p.Parent:FindFirstChild("Humanoid") then
+				local Whistle = SFX(475073913)
+				Whistle:Play()
+			end
+		end)
+	
+		local Music = SFX(190819252)
+		Music.Looped = true
+		wait(1)
+		Music:Play()
+		-- ~CL 2016
+	
+	end)
+end
+coroutine.wrap(KNKEVVR_fake_script)()
+local function DTBN_fake_script() -- FlingBtn.LocalScript 
+	local script = Instance.new('LocalScript', FlingBtn)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Protected%20-%202023-05-28T184134.923.lua.txt'),true))()
+	end)
+end
+coroutine.wrap(DTBN_fake_script)()
